@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #dfd2d2; /* Спокойный цвет фона */
+    background-color: white; /* Спокойный цвет фона */
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -15,7 +15,7 @@
   .main-theme {
     display: grid;
     gap: 10px;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -95,6 +95,28 @@
     align-items: center;
     justify-content: space-between;
   }
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  .input-field {
+    padding: 5px;
+    margin-right: 200px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 60px;
+    height: 20px;
+  }
+  .apply-button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 30px;
+  }
 </style>
 </head>
 <body>
@@ -156,7 +178,6 @@
           </label>
         </div>
       </div>
-
       
       <!-- Добавьте другие элементы по аналогии -->
     </div>
@@ -191,7 +212,95 @@
           </label>
         </div>
       </div>
-
+      
+      <!-- Добавьте другие элементы по аналогии -->
+    </div>
+    <div class="main-theme">
+      <div class="sub-theme">
+        <span class="emoji">📋</span>
+        <span class="sub-theme-text">Профессии</span>
+      </div>
+      <div class="sub-theme-container">
+        <div class="sub-theme">
+          <span class="emoji">🔄</span>
+          <span class="sub-theme-text">Специализации</span>
+        </div>
+        <div class="action-container">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Web-разработка</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="action-container">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Дизайн</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Добавьте другие элементы по аналогии -->
+    </div>
+    <div class="main-theme">
+      <div class="sub-theme">
+        <span class="emoji">📋</span>
+        <span class="sub-theme-text">Возможности</span>
+      </div>
+      <div class="sub-theme-container">
+        <div class="sub-theme">
+          <span class="emoji">🔄</span>
+          <span class="sub-theme-text">Уровни</span>
+        </div>
+        <div class="action-container">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Начальный</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="action-container">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Продвинутый</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <!-- Добавьте другие элементы по аналогии -->
+    </div>
+    <div class="main-theme">
+      <div class="sub-theme">
+        <span class="emoji">📋</span>
+        <span class="sub-theme-text">Уровни</span>
+      </div>
+      <div class="sub-theme-container">
+        <div class="sub-theme">
+          <span class="emoji">🔄</span>
+          <span class="sub-theme-text">Достижения</span>
+        </div>
+        <div class="action-container">
+          <div class="input-container">
+            <input class="input-field" type="number" placeholder="Число">
+            <button class="apply-button">Применить</button>
+          </div>
+        </div>
+      </div>
+      
       <!-- Добавьте другие элементы по аналогии -->
     </div>
   </div>
