@@ -136,7 +136,7 @@
             <span class="action-text">Доп. информация</span>
           </div>
           <label class="toggle-switch">
-            <input type="checkbox">
+            <input type="checkbox" name="exchange_add">
             <span class="toggle-slider"></span>
           </label>
         </div>
@@ -146,7 +146,7 @@
             <span class="action-text">Здоровье</span>
           </div>
           <label class="toggle-switch">
-            <input type="checkbox">
+            <input type="checkbox" name="exchange_health">
             <span class="toggle-slider"></span>
           </label>
         </div>
@@ -167,7 +167,7 @@
             <span class="emoji">😀</span>
             <span class="action-text">Макимальное количество игроков</span>
           </div>
-          <input class="input-field" type="number" value="45" min="30" max="120">
+          <input class="input-field" type="number" value="45" min="30" max="120" name="max_person_in_game">
         </div>
        
       </div>
@@ -188,7 +188,7 @@
             <span class="emoji">😀</span>
             <span class="action-text">Длительность обсуждения</span>
           </div>
-          <input class="input-field" type="number" value="45" min="30" max="120">
+          <input class="input-field" type="number" value="45" min="30" max="120" name="duration_of_the_discussion">
         </div>
 
         <div class="action-container">
@@ -196,7 +196,7 @@
             <span class="emoji">😀</span>
             <span class="action-text">Длительность голосования</span>
           </div>
-          <input class="input-field" type="number" value="45" min="30" max="120">
+          <input class="input-field" type="number" value="45" min="30" max="120" name="Duration_voting">
         </div>
 
         <div class="action-container">
@@ -204,10 +204,62 @@
             <span class="emoji">😀</span>
             <span class="action-text">Длительность вскрытия характеристики</span>
           </div>
-          <input class="input-field" type="number" value="45" min="30" max="120">
+          <input class="input-field" type="number" value="45" min="30" max="120" name="duration_opening_characteristics">
         </div>
       </div>
     </div>
   </div>
 </body>
+<script>
+/*
+let tg = window.Telegram.WebApp;
+tg.expand(); //расширяем на все окно  
+
+tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
+tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметр
+*/
+const data_to_tg = {}; // Object to store slider states
+    
+    // JavaScript code for toggle sliders
+const toggleSliders = document.querySelectorAll('.toggle-slider');
+toggleSliders.forEach(slider => {
+  slider.addEventListener('click', function(event) {
+    const input = event.target.previousElementSibling; // The hidden input field
+    const sliderName = input.name;
+    const sliderStatus = input.checked; // Get the checked status
+    
+    // Update slider states object
+    data_to_tg[sliderName] = sliderStatus;
+    
+    // Output slider states object to the console
+    console.log('Состояния слайдеров:', data_to_tg);
+  });
+});
+
+const inputFields = document.querySelectorAll('.input-field');
+inputFields.forEach(inputField => {
+  inputField.addEventListener('input', function(event) {
+    const inputValue = parseInt(event.target.value); // Парсим введенное значение как целое число
+    const inputName = event.target.name; // Получаем имя поля ввода
+    if (!isNaN(inputValue)) {
+      // Добавляем значение в объект inputValues
+      data_to_tg[inputName] = inputValue;
+      console.log('Значения полей ввода:', data_to_tg);
+    } else {
+      console.log('Введено некорректное число в поле:', inputName);
+    }
+  });
+});
+/*
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+	tg.sendData("some string that we need to send"); 
+});*/
+  // Send data to your Telegram bot using an API call (replace with your actual API endpoint)
+
+  // Close the web app or perform any other desired action
+
+</script>
 </html>
