@@ -95,16 +95,17 @@
   .input-container {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Добавлено для выравнивания по краям */
   }
   .input-field {
     padding: 5px;
-    
-    margin-left: 20px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(173, 169, 169);
     border-radius: 3px;
-    width: 60px;
-    height: 20px;
+    width: 30px;
+    text-align: center;
+    height: 17px;
+    margin-left: 20px; /* Добавлено для смещения к правому краю */
+    
   }
   .apply-button {
     padding: 5px 10px;
@@ -159,16 +160,18 @@
       <div class="sub-theme-container">
         <div class="sub-theme">
           <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Достижения</span>
+          <span class="sub-theme-text">Настройки игры</span>
         </div>
         <div class="action-container">
-          <div class="input-container">
-            <span class="emoji">⏱️</span>
-            <span class="action-text">Максимальное количество игроков</span>
-            <input class="input-field" type="number" value="45" min="30" max="120">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Макимальное количество игроков</span>
           </div>
+          <input class="input-field" type="number" value="45" min="30" max="120">
         </div>
+       
       </div>
+      
     </div>
     <div class="main-theme">
       <div class="sub-theme">
@@ -181,25 +184,27 @@
           <span class="sub-theme-text">Настройка длительности (от 30 до 120 сек.)</span>
         </div>
         <div class="action-container">
-          <div class="input-container">
-            <span class="emoji">⏱️</span>
+          <div class="action">
+            <span class="emoji">😀</span>
             <span class="action-text">Длительность обсуждения</span>
-            <input class="input-field" type="number" value="45" min="30" max="120">
           </div>
+          <input class="input-field" type="number" value="45" min="30" max="120">
         </div>
+
         <div class="action-container">
-          <div class="input-container">
-            <span class="emoji">⏱️</span>
+          <div class="action">
+            <span class="emoji">😀</span>
             <span class="action-text">Длительность голосования</span>
-            <input class="input-field" type="number" value="45" min="30" max="120">
           </div>
+          <input class="input-field" type="number" value="45" min="30" max="120">
         </div>
+
         <div class="action-container">
-          <div class="input-container">
-            <span class="emoji">⏱️</span>
-            <span class="action-text">Длительность всрытия характеристики</span>
-            <input class="input-field" type="number" value="45" min="30" max="120">
+          <div class="action">
+            <span class="emoji">😀</span>
+            <span class="action-text">Длительность вскрытия характеристики</span>
           </div>
+          <input class="input-field" type="number" value="45" min="30" max="120">
         </div>
       </div>
     </div>
