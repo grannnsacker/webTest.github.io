@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: white; /* Спокойный цвет фона */
+    background-color: rgb(218, 206, 206); /* Спокойный цвет фона */
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -20,10 +20,7 @@
     background-color: white;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
   }
-
-
   .sub-theme {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -85,7 +82,7 @@
     transform: translateX(20px);
   }
   .sub-theme-container {
-    border: 2px solid #2c3e50; /* Темная окантовка e4dcdc*/
+    border: 2px solid #2c3e50; /* Темная окантовка */
     border-radius: 5px;
     background-color: white;
     padding: 10px;
@@ -101,7 +98,8 @@
   }
   .input-field {
     padding: 5px;
-    margin-right: 200px;
+    
+    margin-left: 20px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -152,136 +150,6 @@
           </label>
         </div>
       </div>
-      <div class="sub-theme-container">
-        <div class="sub-theme">
-          <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Карточки Замены</span>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Доп. информация</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Здоровье</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      
-      <!-- Добавьте другие элементы по аналогии -->
-    </div>
-    <div class="main-theme">
-      <div class="sub-theme">
-        <span class="emoji">📋</span>
-        <span class="sub-theme-text">Характеристики</span>
-      </div>
-      <div class="sub-theme-container">
-        <div class="sub-theme">
-          <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Профессии</span>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Блогер</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Слесарь</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      
-      <!-- Добавьте другие элементы по аналогии -->
-    </div>
-    <div class="main-theme">
-      <div class="sub-theme">
-        <span class="emoji">📋</span>
-        <span class="sub-theme-text">Профессии</span>
-      </div>
-      <div class="sub-theme-container">
-        <div class="sub-theme">
-          <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Специализации</span>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Web-разработка</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Дизайн</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      
-      <!-- Добавьте другие элементы по аналогии -->
-    </div>
-    <div class="main-theme">
-      <div class="sub-theme">
-        <span class="emoji">📋</span>
-        <span class="sub-theme-text">Возможности</span>
-      </div>
-      <div class="sub-theme-container">
-        <div class="sub-theme">
-          <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Уровни</span>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Начальный</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-        <div class="action-container">
-          <div class="action">
-            <span class="emoji">😀</span>
-            <span class="action-text">Продвинутый</span>
-          </div>
-          <label class="toggle-switch">
-            <input type="checkbox">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      
-      <!-- Добавьте другие элементы по аналогии -->
     </div>
     <div class="main-theme">
       <div class="sub-theme">
@@ -295,13 +163,45 @@
         </div>
         <div class="action-container">
           <div class="input-container">
-            <input class="input-field" type="number" placeholder="Число">
-            <button class="apply-button">Применить</button>
+            <span class="emoji">⏱️</span>
+            <span class="action-text">Максимальное количество игроков</span>
+            <input class="input-field" type="number" value="45" min="30" max="120">
           </div>
         </div>
       </div>
-      
-      <!-- Добавьте другие элементы по аналогии -->
+    </div>
+    <div class="main-theme">
+      <div class="sub-theme">
+        <span class="emoji">📋</span>
+        <span class="sub-theme-text">Настройка длительности игровых этапов</span>
+      </div>
+      <div class="sub-theme-container">
+        <div class="sub-theme">
+          <span class="emoji">🔄</span>
+          <span class="sub-theme-text">Настройка длительности (от 30 до 120 сек.)</span>
+        </div>
+        <div class="action-container">
+          <div class="input-container">
+            <span class="emoji">⏱️</span>
+            <span class="action-text">Длительность обсуждения</span>
+            <input class="input-field" type="number" value="45" min="30" max="120">
+          </div>
+        </div>
+        <div class="action-container">
+          <div class="input-container">
+            <span class="emoji">⏱️</span>
+            <span class="action-text">Длительность голосования</span>
+            <input class="input-field" type="number" value="45" min="30" max="120">
+          </div>
+        </div>
+        <div class="action-container">
+          <div class="input-container">
+            <span class="emoji">⏱️</span>
+            <span class="action-text">Длительность всрытия характеристики</span>
+            <input class="input-field" type="number" value="45" min="30" max="120">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
