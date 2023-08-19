@@ -259,8 +259,8 @@ inputFields.forEach(inputField => {
 });
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
-  const jsonInputValues = JSON.stringify(inputValues); // Преобразование объекта в строку JSON
-  tg.sendData(jsonInputValues); // Отправка данных в виде строки JSON
+  const jsondata_to_tg = JSON.stringify(data_to_tg); // Преобразование объекта в строку JSON
+  tg.sendData(jsondata_to_tg); // Отправка данных в виде строки JSON
 });
 /*
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
