@@ -182,7 +182,7 @@
       <div class="sub-theme-container">
         <div class="sub-theme">
           <span class="emoji">🔄</span>
-          <span class="sub-theme-text">Настройка длительности (от 30 до 120 сек.)</span>
+          <span class="sub-theme-text">Настройка длительности (от 31 до 120 сек.)</span>
         </div>
         <div class="action-container">
           <div class="action">
@@ -215,7 +215,7 @@
 
 let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
-
+tg.MainButton.isVisible
 tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
 tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
@@ -235,10 +235,12 @@ toggleSliders.forEach(slider => {
     // Update slider states object
     data_to_tg[sliderName] = sliderStatus;
     
+
     // Output slider states object to the console
     console.log('Состояния слайдеров:', data_to_tg);
   });
 });
+
 
 const inputFields = document.querySelectorAll('.input-field');
 inputFields.forEach(inputField => {
