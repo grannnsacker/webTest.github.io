@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Emoji List with Toggle Switches</title>
-
-</head>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
 <body>
   <div class="emoji-list">
     <div class="emoji-item">
@@ -31,9 +31,5 @@
     </div>
     <!-- Добавьте другие эмоджи и чекбоксы по аналогии -->
   </div>
-</body>
-</html>
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
-	<script src="app.js"></script>
 </body>
 </html>
