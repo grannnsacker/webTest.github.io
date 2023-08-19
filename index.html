@@ -3,35 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emoji List with Toggle Switches</title>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="app.js"></script>
-<link rel="stylesheet" href="style.css">
+<title>Card Actions</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #cec2c2; /* Спокойный цвет фона */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .main-theme {
+    display: grid;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .sub-theme {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold; /* Выделение подтем */
+  }
+  .emoji {
+    font-size: 24px;
+  }
+  .sub-theme-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .action {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+  .action-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: relative;
+    width: 36px;
+    height: 16px;
+    background-color: #27ae60; /* Зеленый цвет */
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  .toggle-slider:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .toggle-switch input:checked + .toggle-slider {
+    background-color: #e74c3c; /* Красный цвет */
+  }
+  .toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+  }
+  .sub-theme-container {
+    border: 2px solid #2c3e50; /* Темная окантовка */
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .action-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
+</head>
 <body>
-  <div class="emoji-list">
-    <div class="emoji-item">
-      <span class="emoji">😀</span>
-      <span class="card_text">Караточка обмена здоровья</span>
-      <label class="toggle-switch">
-        <input type="checkbox">
-        <span class="toggle-slider"></span>
-      </label>
+  <div class="main-theme">
+    <div class="sub-theme">
+      <span class="emoji">📋</span>
+      <span class="sub-theme-text">Карточки действий</span>
     </div>
-    <div class="emoji-item">
-      <span class="emoji">🥰</span>
-      <label class="toggle-switch">
-        <input type="checkbox">
-        <span class="toggle-slider"></span>
-      </label>
+    <div class="sub-theme-container">
+      <div class="sub-theme">
+        <span class="emoji">🔄</span>
+        <span class="sub-theme-text">Карточки обмена</span>
+      </div>
+      <div class="action-container">
+        <div class="action">
+          <span class="emoji">😀</span>
+          <span class="action-text">Доп. информация</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="action-container">
+        <div class="action">
+          <span class="emoji">😀</span>
+          <span class="action-text">Доп. информация</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      
     </div>
-    <div class="emoji-item">
-      <span class="emoji">😎</span>
-      <label class="toggle-switch">
-        <input type="checkbox">
-        <span class="toggle-slider"></span>
-      </label>
-    </div>
-    <!-- Добавьте другие эмоджи и чекбоксы по аналогии -->
+    <!-- Добавьте другие элементы по аналогии -->
   </div>
 </body>
 </html>
