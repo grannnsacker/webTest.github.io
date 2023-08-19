@@ -1,0 +1,43 @@
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .emoji-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .emoji-item {
+    display: flex;
+    align-items: center;
+  }
+  .emoji {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .toggle-switch input:checked + .toggle-slider {
+    transform: translateX(20px);
+  }
