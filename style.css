@@ -1,18 +1,30 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 .emoji-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .emoji-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .emoji {
   font-size: 24px;
   margin-right: 10px;
+}
+
+.card_text{
+  font-size: 20px;
 }
 .toggle-switch {
   position: relative;
@@ -21,6 +33,7 @@ body {
   height: 20px;
   background-color: #ccc;
   border-radius: 20px;
+  overflow: hidden;
 }
 .toggle-switch input {
   opacity: 0;
@@ -33,10 +46,12 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: red;
   border-radius: 50%;
   transition: 0.3s;
+  transform: translateX(0);
 }
 .toggle-switch input:checked + .toggle-slider {
+  background-color: #27ae60;
   transform: translateX(20px);
 }
