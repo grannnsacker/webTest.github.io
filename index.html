@@ -10,16 +10,17 @@
     font-family: Arial, sans-serif;
     background-color: white; /* Спокойный цвет фона */
     margin: 0;
-    padding: 20px;
+    padding: 5px;
     box-sizing: border-box;
+    width: 500px;
   }
   .main-theme {
     display: grid;
     gap: 10px;
-    max-width: 500px;
+    
     margin: 0 auto;
     background-color: white;
-    padding: 20px;
+    padding: 20px 2px 0px 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .sub-theme {
@@ -217,9 +218,11 @@ let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
 tg.MainButton.show() // показать кнопку 
 tg.MainButton.enable() 
-tg.MainButton.setText("СОХРАНИТЬ И ЗАКРЫТЬ"); //изменяем текст кнопки иначе
-tg.MainButton.textColor = "#fff0f5"; //изменяем цвет текста кнопки
-tg.MainButton.color = "#6D52D9	"; //изменяем цвет бэкграунда кнопки
+tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
+tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+/*tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметр*/
 
 const data_to_tg = {}; // Object to store slider states
     
