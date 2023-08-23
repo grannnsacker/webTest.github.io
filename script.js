@@ -5,8 +5,8 @@ const sequelize = new Sequelize('postgresql://bunker:bunker@127.0.0.1:5433/bunke
 
 let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
-tg.MainButton.show() // показать кнопку 
-tg.MainButton.enable() 
+tg.MainButton.show(); // показать кнопку 
+tg.MainButton.enable();
 tg.MainButton.text = "СОХРАНИТЬ И ЗАКРЫТЬ"; //изменяем текст кнопки 
 tg.MainButton.textColor = "#fff0f5"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#8942d6"; //изменяем цвет бэкграунда кнопки
