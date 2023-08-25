@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="script.js"></script>
+<script type="text/javascript" src="script.js" defer></script>
 <link rel="stylesheet" href="style.css">
 <title>Card Actions</title>
 
@@ -27,7 +28,7 @@
             <span class="action-text">Доп. информация</span>
           </div>
           <label class="toggle-switch">
-            <input type="checkbox" name="exchange_add">
+            <input onchange="switch_card(this.name)" type="checkbox" name="exchange_add">
             <span class="toggle-slider"></span>
           </label>
         </div>
@@ -57,12 +58,12 @@
           <div class="action">
             <span class="emoji">😀</span>
             <span class="action-text">Макc. количество игроков (до 15)</span>
-            
+
           </div>
           <input class="input-field" type="number" value="7" min="4" max="10" name="max_person_in_game">
         </div>
       </div>
-      
+
     </div>
     <div class="main-theme">
       <div class="sub-theme">
