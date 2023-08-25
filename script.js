@@ -12,11 +12,12 @@ tg.MainButton.color = "#8942d6"; //изменяем цвет бэкграунд�
 */
 
 function switch_card(card_name) {
-    let tg = window.Telegram.WebApp;
+    //let tg = window.Telegram.WebApp;
+    //  tg.initDataUnsafe.user.id.toString()
     const xhr = new XMLHttpRequest()
     xhr.open(
         "GET",
-        "http://localhost:5000/cards/" + card_name.toString() + "/" + tg.initDataUnsafe.user.id.toString()
+        "http://31.129.97.221:80/cards/" + card_name.toString() + "/" + "2222"
     )
     xhr.send()
 }
